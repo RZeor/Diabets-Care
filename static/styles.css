@@ -1,0 +1,152 @@
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('001.png') no-repeat center center fixed; /* Set the image as the background */
+    background-size: cover; /* Make sure the image covers the entire screen */
+    color: #333;
+}
+.body1{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('004.png') no-repeat center center fixed; /* Set the image as the background */
+    background-size: cover; /* Make sure the image covers the entire screen */
+    color: #333;
+}
+
+header {
+    background-color: #005f99; /* Transparent background for header */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgb(255, 255, 255);/* Transparent white background */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.icontainer{
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgb(255, 255, 255); /* Transparent white background */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.iocontainer{
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.934); /* Transparent white background */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ccontainer{
+    max-width: 700px;
+    position: absolute; /* Gunakan posisi absolut untuk memindahkan elemen */
+    top: 50%; /* Atur jarak dari atas */
+    left: 20px; /* Pastikan berada di sisi kiri */
+    transform: translateY(-50%); /* Pusatkan secara vertikal */
+    padding: 1rem;
+    padding-left: px;
+    background: rgb(255, 255, 255); /* Transparent white background */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, button {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #005f99;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+a.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #005f99;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+a.button:hover {
+    background-color: #004080;
+}
+
+.data {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 12px;
+    table-layout: fixed;
+}
+
+.data th, .data td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.data th {
+    background-color: #f2f2f2;
+}
+
+.icontainer {
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.ul1 {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+}
+
+.footer {
+    background-color: #005f99; /* Transparent background for header */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+  }
+.h2{
+    align-items: center;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body class="body">
+    <div class="ccontainer">
+        <p>diabetes adalah penyakit yang tidak langsung menyebabkan kematian secara langsung, 
+            tetapi apabila tidak ditangani secara cepat dapat menyebabkan berbagai komplikasi yang dapat menyebabkan 
+            kematian oleh karena itu mendeteksi dini penyakit tersebut dapat mengurangi resiko komplikasi</p>
+        <p>disini DIABETS-CARE akan memprediksi kemungkinan anda menderita diabetes berdasarkan gejala yang anda rasakan.</p>
+        <a href="{{ url_for('form') }}" class="button">Go to Detection Form</a>
+        <a href="{{ url_for('evaluation') }}" class="button">Go to Evaluation Model</a>
+    </div>
+    
+</body>
+
+</html>

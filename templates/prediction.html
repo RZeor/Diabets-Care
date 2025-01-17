@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body class="body1">
+    <header>
+        <h1>Hasil Deteksi</h1>
+    </header>
+    <div class="container">
+        <p>Berdasarkan data yang Anda masukkan, hasil deteksi adalah:</p>
+        <h2>{{ result }}</h2>
+        <p>{{ resulte }}</p>
+        <a href="{{ url_for('index') }}" class="button">Kembali</a>
+    </div>
+</body>
+
+</html>

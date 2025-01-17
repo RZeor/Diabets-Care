@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body class="body1">
+    <header>
+        <h1>"evaluasi model DIABETS-CARE"</h1>
+    </header>
+    <div class="container">
+        <form action="/evaluation" method="post">
+            <button type="submit" class="button">lihat evaluasi Model</button>
+        </form>
+    </div>
+    <div class="container">
+        <h2>Deskripsi Atribut</h2>
+        <ul class="ul1">
+            <li><strong>Age:</strong> Usia pasien dalam tahun.</li>
+            <li><strong>Gender:</strong> Jenis kelamin pasien (Laki-laki/Perempuan).</li>
+            <li><strong>Polyuria:</strong> Produksi urine yang berlebihan atau lebih banyak dari biasanya.</li>
+            <li><strong>Polydipsia:</strong> Rasa haus yang berlebihan atau sering minum.</li>
+            <li><strong>Sudden Weight Loss:</strong> Penurunan berat badan yang signifikan dan tidak disengaja.</li>
+            <li><strong>Weakness:</strong> Kelemahan umum atau kehilangan kekuatan.</li>
+            <li><strong>Polyphagia:</strong> Rasa lapar yang berlebihan atau peningkatan nafsu makan.</li>
+            <li><strong>Genital Thrush:</strong> Infeksi jamur yang memengaruhi area genital.</li>
+            <li><strong>Visual Blurring:</strong> Penglihatan kabur atau sulit melihat dengan jelas.</li>
+            <li><strong>Itching:</strong> Sensasi gatal baik di area tertentu maupun secara umum.</li>
+            <li><strong>Irritability:</strong> Mudah marah atau mengalami perubahan suasana hati.</li>
+            <li><strong>Delayed Healing:</strong> Proses penyembuhan luka yang lebih lambat dari biasanya.</li>
+            <li><strong>Partial Paresis:</strong> Kehilangan sebagian kemampuan gerak atau kelemahan pada otot.</li>
+            <li><strong>Muscle Stiffness:</strong> Kesulitan menggerakkan otot karena kaku atau tegang.</li>
+            <li><strong>Alopecia:</strong> Kehilangan rambut atau kebotakan.</li>
+            <li><strong>Obesity:</strong> Kelebihan berat badan yang dapat memengaruhi kesehatan.</li>
+            <li><strong>Class:</strong> Label yang menunjukkan apakah pasien menderita diabetes (Positif/Negatif).</li>
+        </ul>
+    </div>
+    <div class="icontainer">
+        {% if df %}
+        <h2>Database Data</h2>
+        <div class="icontainer" style="overflow-x: auto;">
+            {{ df|safe }}
+        </div>
+        {% endif %}
+
+        <!-- Tampilkan metrik evaluasi -->
+        {% if accuracy and precision and f1 %}
+        <h3>Model Evaluation Metrics</h3>
+        <div class="container">
+            <ul>
+                <li><strong>Accuracy:</strong> {{ accuracy }}</li>
+                <li><strong>Precision:</strong> {{ precision }}</li>
+                <li><strong>F1 Score:</strong> {{ f1 }}</li>
+            </ul>
+        </div>
+        {% endif %}
+
+        <!-- Tampilkan confusion matrix -->
+        {% if cm_image %}
+        <h3>Confusion Matrix</h3>
+        <div class="container">
+            <img src="data:image/png;base64,{{ cm_image }}" alt="Confusion Matrix">
+        </div>
+        {% endif %}
+
+        <a href="{{ url_for('index') }}" class="button">Kembali</a>
+    </div>
+    <footer class="footer">
+        <p>Made with <i class="fa-solid fa-heart pulse"></i> DIABETS-CARE </p>
+    </footer>
+</body>
+
+</html>

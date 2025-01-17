@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Prediksi Diabetes</title>
+    <!-- Menghubungkan file CSS untuk styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body class="body1">
+    <header>
+        <!-- Judul halaman -->
+        <h1>Form Prediksi Diabetes</h1>
+    </header>
+    <div class="iocontainer">
+        <!-- Formulir untuk input data pasien -->
+        <form action="/predict" method="post">
+            <!-- Input umur -->
+            <label for="age">Umur:</label>
+            <input type="number" id="age" name="age" placeholder="Masukkan umur Anda" required>
+
+            <!-- Input jenis kelamin -->
+            <label for="gender">Jenis Kelamin:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Laki-laki</option>
+                <option value="No">Perempuan</option>
+            </select>
+
+            <!-- Input untuk Polyuria -->
+            <label for="polyuria">Polyuria (Sering Buang Air Kecil): </label>
+            <select id="polyuria" name="polyuria" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Input untuk Polydipsia -->
+            <label for="polydipsia">Polydipsia (Sering Haus): </label>
+            <select id="polydipsia" name="polydipsia" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Input untuk berat badan -->
+            <label for="weight_loss">Penurunan Berat Badan Mendadak:</label>
+            <select id="weight_loss" name="weight_loss" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Input untuk kelemahan -->
+            <label for="weakness">kehilangan kekuatan:</label>
+            <select id="weakness" name="weakness" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Input untuk Polyphagia -->
+            <label for="polyphagia">Rasa Lapar Berlebihan:</label>
+            <select id="polyphagia" name="polyphagia" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Input untuk Genital Thrush -->
+            <label for="genital_thrush">Infeksi Jamur di area Genital:</label>
+            <select id="genital_thrush" name="genital_thrush" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Input untuk Visual Blurring -->
+            <label for="visual_blurring">Penglihatan Buram:</label>
+            <select id="visual_blurring" name="visual_blurring" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Input untuk rasa gatal -->
+            <label for="itching">Rasa Gatal:</label>
+            <select id="itching" name="itching" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Input untuk iritabilitas -->
+            <label for="irritability">mudah tersinggung:</label>
+            <select id="irritability" name="irritability" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Input untuk penyembuhan luka -->
+            <label for="delayed_healing"> Penyembuhan yang Lambat:</label>
+            <select id="delayed_healing" name="delayed_healing" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Input untuk paresis parsial -->
+            <label for="partial_paresis">otot melemah:</label>
+            <select id="partial_paresis" name="partial_paresis" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Input untuk kekakuan otot -->
+            <label for="muscle_stiffness">Kesulitan menggerakkan Otot:</label>
+            <select id="muscle_stiffness" name="muscle_stiffness" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Input untuk alopecia -->
+            <label for="alopecia">Rambut Rontok:</label>
+            <select id="alopecia" name="alopecia" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Input untuk obesitas -->
+            <label for="obesity">Obesitas:</label>
+            <select id="obesity" name="obesity" required>
+                <option value="">Pilih</option>
+                <option value="Yes">Ya</option>
+                <option value="No">Tidak</option>
+            </select>
+
+            <!-- Tombol untuk submit data -->
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <p>Made with <i class="fa-solid fa-heart pulse"></i> by DIABETS-CARE </p>
+    </footer>
+</body>
+
+</html>
